@@ -1,0 +1,11 @@
+.head{
+    position: absolute;
+width: 1200px;
+height: 644px;
+left: 200px;
+top: 116px;
+
+background: #FFFFFF;
+box-shadow: 0px 0px 10px rgba(143, 143, 143, 0.25);
+border-radius: 12px;
+}
