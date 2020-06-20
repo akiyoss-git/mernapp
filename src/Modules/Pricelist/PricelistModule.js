@@ -32,10 +32,10 @@ export default class PricelistModule extends Component {
     render() {
         return (
             <div className="head">
-                <div><button onClick={this.onClickPricelist}>Прайслист</button></div>
-                <div><button onClick={this.onClickNomen}>Номенклатура</button></div>
-                <div><button onClick={this.onClickWarehouse}>Склад</button></div>
-                <div><button onClick={this.onClickAnalys}>Аналитика</button></div>
+                <button onClick={this.onClickPricelist} className="price">Прайслист</button>
+                <button onClick={this.onClickNomen} className="nomen">Номенклатура</button>
+                <button onClick={this.onClickWarehouse} className="warehouse">Склад</button>
+                <button onClick={this.onClickAnalys} className="analys">Аналитика</button>
                 {this.state.analys ? <div>Аналитика</div> : null }       
                 {this.state.pricelist ? <div>Прайслист</div> : null }              
                 {this.state.nomen ? <div>Номенклатура</div> : null }
