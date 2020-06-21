@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import CreateTypeModal from "./Modals/CreateTypeModal"
 import axios from 'axios';
 
 const Act = props => (
@@ -8,7 +9,6 @@ const Act = props => (
         <td>{props.act.type}</td>
         <td>{props.act.price}</td>
         <td>
-            <Link to={"/edit/"+props.act._id}>Edit</Link>
         </td>
     </tr>
 )
@@ -39,6 +39,7 @@ export default class Pricelist extends Component {
     render() {
         return (
             <div>
+                <CreateTypeModal />
                 <h3>Acts List</h3>
                 <table className="table table-striped" style={{ marginTop: 20 }}>
                     <thead>
