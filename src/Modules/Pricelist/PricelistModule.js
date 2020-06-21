@@ -16,21 +16,50 @@ export default class PricelistModule extends Component {
         
     }
     onClickPricelist(){
-        this.setState({pricelist: true, nomen: false, warehouse: false, analys: false})
+        const cookie = new Cookies();
+        cookie.set("state", "pricelist");
+        this.setState({pricelist: true, nomen: false, warehouse: false, analys: false});
     }
 
     onClickNomen(){
-        this.setState({pricelist: false, nomen: true, warehouse: false, analys: false})
+        const cookie = new Cookies();
+        cookie.set("state", "nomen");
+        this.setState({pricelist: false, nomen: true, warehouse: false, analys: false});
     }
 
     onClickWarehouse(){
-        this.setState({pricelist: false, nomen: false, warehouse: true, analys: false})
+        const cookie = new Cookies();
+        cookie.set("state", "warehouse");
+        this.setState({pricelist: false, nomen: false, warehouse: true, analys: false});
     }
 
     onClickAnalys(){
-        this.setState({pricelist: false, nomen: false, warehouse: false, analys: true})
+        const cookie = new Cookies();
+        cookie.set("state", "analys");
+        this.setState({pricelist: false, nomen: false, warehouse: false, analys: true});
     }
     
+    componentDidMount(){
+        const cookie = new Cookies();
+        let state = cookie.get("state");
+        if (state === "pricelist"){
+            this.setState({pricelist: true, nomen: false, warehouse: false, analys: false});
+        } else{
+            if (state === "warehouse"){
+                this.setState({pricelist: false, nomen: false, warehouse: true, analys: false});
+            }else{
+                if (state === "nomen"){
+                    this.setState({pricelist: false, nomen: true, warehouse: false, analys: false});
+                }else{
+                    if (state === "analys"){
+                        this.setState({pricelist: false, nomen: false, warehouse: false, analys: true});
+                    }else{
+                        this.onClickPricelist();
+                    }
+                }
+            }
+        }
+    }
 
     render() {
         return (
