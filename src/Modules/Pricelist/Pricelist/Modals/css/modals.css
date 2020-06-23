@@ -1,0 +1,29 @@
+.createType{
+width: 1144px;
+height: 46px;
+left: 228px;
+top: 400px;
+
+background: #B7A7D7;
+border-radius: 0px 0px 12px 12px;
+}
+
+.addCategory{
+    position: absolute;
+    width: 288px;
+    height: 42px;
+    left: 1084px;
+    top: 702px;
+    
+    background: #FC6441;
+    border-radius: 12px;
+}
+
+.delete{
+    width: 30px;
+height: 30px;
+margin-left: 1100px;
+
+
+background: #E4E2F4;
+}

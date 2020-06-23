@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
+import "./css/modals.css"
 
 class DeleteModal extends React.Component {
     constructor(props, context) {
@@ -49,7 +50,7 @@ class DeleteModal extends React.Component {
     render() {
         return (
             <>
-                <button type="button" onClick={this.handleShow} className="button">
+                <button type="button" onClick={this.handleShow} className="filter">
                     Фильтр
                 </button>
                 <Modal show={this.state.show} onHide={this.handleClose} className="text-dark">

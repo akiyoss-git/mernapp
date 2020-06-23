@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Pricelist from "./Pricelist/Pricelist"
 import CookieModal from "./Pricelist/Modals/CookieModal"
 import Cookies from 'universal-cookie';
-import "./css/module.css"
 
 export default class PricelistModule extends Component {
     constructor(props){
@@ -65,7 +64,7 @@ export default class PricelistModule extends Component {
         return (
             <div className="head">
                 <CookieModal />
-                <button onClick={this.onClickPricelist} className="price">Прайслист</button>
+                <button onClick={this.onClickPricelist} className="pricelist">Прайслист</button>
                 <button onClick={this.onClickNomen} className="nomen">Номенклатура</button>
                 <button onClick={this.onClickWarehouse} className="warehouse">Склад</button>
                 <button onClick={this.onClickAnalys} className="analys">Аналитика</button>

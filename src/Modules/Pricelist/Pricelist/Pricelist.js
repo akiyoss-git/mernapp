@@ -6,22 +6,23 @@ import DeleteModal from "./Modals/DeleteModal"
 import FilterModal from "./Modals/FilterModal"
 import axios from 'axios';
 import Cookies from 'universal-cookie';
+import "./css/pricelist.css"
 
 const Act = props => (
+    <>
     <tr>
-        <td>{props.act.name}</td>
-        <td>{props.act.price}</td>
-        <td><DeleteModal id={props.act._id} />
-        </td>
+        <td><div className="name">{props.act.name}</div><div className="price">{props.act.price}₽</div>{props.hidden && <DeleteModal id={props.act._id} />} <div className="line"></div></td>
     </tr>
+    </>
 )
 
 export default class Pricelist extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {acts: [], types: []};
+        this.state = {acts: [], types: [], hidden: true};
         this.ActList = this.ActList.bind(this)
+        this.hidden=this.hidden.bind(this)
     }
 
     componentDidMount() {
@@ -37,30 +38,37 @@ export default class Pricelist extends Component {
             })
     }
 
+    hidden(){
+        this.setState({
+            hidden: !this.state.hidden
+        })
+    }
+
+
     ActList(type) {
         let acts = this.state.acts;
         const cookie = new Cookies();
         let filter = cookie.get('filter')
-        if (filter === ""){
+        let hidden = this.hidden
+        let state = this.state.hidden
+        if ((filter === "") || (filter === undefined)){
             return this.state.types.map(function(type, i) {
             return (
                 <>
-                <h3>{type.name}</h3>
-                <table className="table table-striped" style={{ marginTop: 20 }}>
+                <table style={{ marginTop: 20 }}>
                     <thead>
                         <tr>
-                            <th>Имя</th>
-                            <th>Тип</th>
-                            <th>Цена</th>
-                            <th>Гействия</th>
-                            <th><CreateModal type={type.name} /></th>
+                        <tr>
+                            <th><div className="rotate">{type.name}<button onClick={hidden} className="sht">шестерня</button></div></th>
+                            </tr>
                         </tr>
                     </thead>
                     <tbody>
                         { acts.map(function(currentAct, i) {
                             if (type.name == currentAct.type)
-                            return <Act act={currentAct} key={i} />;
+                            return <Act act={currentAct} key={i} hidden={state}/>;
                         })}
+                        <CreateModal type={type.name} name={type.name}/>
                     </tbody>
                 </table>
                 </>
@@ -72,21 +80,18 @@ export default class Pricelist extends Component {
                     return (
                     <>
                     <h3>{type.name}</h3>
-                    <table className="table table-striped" style={{ marginTop: 20 }}>
+                    <table style={{ marginTop: 20 }}>
                         <thead>
                             <tr>
-                                <th>Имя</th>
-                                <th>Тип</th>
-                                <th>Цена</th>
-                                <th>Гействия</th>
-                                <th><CreateModal type={type.name} /></th>
+                            <th><div className="rotate">{type.name}<button onClick={hidden}>шестерня</button></div></th>
                             </tr>
                         </thead>
                         <tbody>
                             { acts.map(function(currentAct, i) {
                                 if (type.name == currentAct.type)
-                                return <Act act={currentAct} key={i} />;
+                                return <Act act={currentAct} key={i} hidden={state}/>;
                             })}
+                            <CreateModal type={type.name} />
                         </tbody>
                     </table>
                     </>
@@ -101,9 +106,12 @@ export default class Pricelist extends Component {
     render() {
         return (
             <div>
-                <CreateTypeModal />
                 <FilterModal />
                 {this.ActList()}
+                <form action="http://localhost:4000/acts/excel/">
+                    <button type="submit" className="xls">Скачать в .xlsx</button>
+                </form>
+                <CreateTypeModal />
             </div>
         )
     }

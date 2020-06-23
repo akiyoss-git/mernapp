@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
-
+import "./css/modals.css"
 import axios from 'axios';
 
 class CreateTypeModal extends React.Component {
@@ -56,8 +56,8 @@ class CreateTypeModal extends React.Component {
     render() {
         return (
             <>
-                <button type="button" onClick={this.handleShow} className="button">
-                    Создать штуку
+                <button type="button" onClick={this.handleShow} className="createType">
+                Добавить услугу в категорию “{this.props.name}”
                 </button>
                 <Modal show={this.state.show} onHide={this.handleClose} className="text-dark">
                     <Modal.Header closeButton>

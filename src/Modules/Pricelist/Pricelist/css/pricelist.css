@@ -1,0 +1,100 @@
+.xls{
+width: 288px;
+height: 42px;
+left: 228px;
+top: 702px;
+
+background: #260B5D;
+border-radius: 12px;
+}
+
+th{
+width: 1144px;
+height: 46px;
+left: 1372px;
+top: 504px;
+transform: rotate(180deg);
+background: #260B5D;
+border-radius: 0px 0px 12px 12px;
+}
+
+table{
+    width: 1144px;
+height: 227px;
+left: 228px;
+top: 458px;
+
+background: #FFFFFF;
+box-shadow: 0px 0px 10px rgba(143, 143, 143, 0.25);
+border-radius: 12px;
+}
+
+.rotate{
+    transform: rotate(180deg);
+    width: 1144px;
+    height: 46px;
+left: 244px;
+top: 231px;
+
+font-family: PT Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+line-height: 20px;
+
+/* identical to box height, or 118% */
+letter-spacing: -0.41px;
+
+color: #FFFFFF;
+}
+
+.line{
+    width: 1112px;
+height: 1px;
+background: #F4F4F5;
+}
+
+.name{
+    width: 170px;
+height: 20px;
+left: 244px;
+top: 277px;
+
+font-family: PT Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+line-height: 20px;
+
+/* identical to box height, or 118% */
+letter-spacing: -0.41px;
+
+color: #9285AE;
+}
+
+.price{
+    width: 36px;
+height: 20px;
+margin-left: 1050px;
+
+font-family: PT Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+line-height: 20px;
+
+/* identical to box height, or 118% */
+text-align: right;
+letter-spacing: -0.41px;
+
+color: #260B5D;
+}
+
+.sht{
+    width: 30px;
+height: 30px;
+margin-left: 1100px;
+top: 226px;
+
+background: #E4E2F4;
+}
