@@ -1,12 +1,96 @@
-.head{
+.pricelist{
     position: absolute;
+width: 286px;
+height: 38px;
+left:26px;
+
+font-family: PT Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+line-height: 20px;
+
+/* or 118% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.41px;
+
+color: #260B5D;
+}
+
+.nomen{
+    position: absolute;
+width: 286px;
+height: 38px;
+left: 312px;
+
+font-family: PT Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+line-height: 20px;
+
+/* or 118% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.41px;
+
+color: #B7A7D7;
+}
+
+.warehouse{
+    position: absolute;
+width: 286px;
+height: 38px;
+left: 598px;
+
+font-family: PT Sans;
+font-style: normal;
+font-weight: normal;
+
+letter-spacing: -0.41px;
+
+color: #B7A7D7;
+}
+
+.analys{
+    position: absolute;
+    width: 286px;
+height: 38px;
+left: 884px;
+
+font-family: PT Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+line-height: 20px;
+
+/* or 118% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.41px;
+
+color: #B7A7D7;
+}
+
+.downLine{
+    position: absolute;
+width: 314px;
+height: 2px;
+left: 0px;
+top:38px;
+
+background: #62319E;
+}
+
+.head{
+    position: relative;
 width: 1200px;
-height: 644px;
-left: 200px;
-top: 116px;
 
 background: #FFFFFF;
 box-shadow: 0px 0px 10px rgba(143, 143, 143, 0.25);
 border-radius: 12px;
 }
-

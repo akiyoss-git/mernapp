@@ -6,24 +6,44 @@ top: 400px;
 
 background: #B7A7D7;
 border-radius: 0px 0px 12px 12px;
+
+font-family: PT Sans;
+font-style: normal;
+font-weight: normal;
+color: #260B5D;
 }
 
 .addCategory{
-    position: absolute;
+    position: relative;
     width: 288px;
     height: 42px;
-    left: 1084px;
-    top: 702px;
+    left: 850px;
     
     background: #FC6441;
     border-radius: 12px;
+    font-family: PT Sans;
+font-style: normal;
+font-weight: bold;
+
+color: #FFFFFF;
 }
 
 .delete{
+    position: relative;
     width: 30px;
 height: 30px;
-margin-left: 1100px;
+    top:-25px;
+    left: 1100px;
 
+background: #E4E2F4;
+}
+
+.filter{
+    position: absolute;
+width: 30px;
+height: 30px;
+left: 452px;
+top: 174px;
 
 background: #E4E2F4;
 }
