@@ -22,7 +22,7 @@ export default class Pricelist extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {acts: [], types: [], hidden: true};
+        this.state = {acts: [], types: [], hidden: false};
         this.ActList = this.ActList.bind(this)
         this.hidden=this.hidden.bind(this)
     }

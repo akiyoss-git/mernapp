@@ -1,14 +1,11 @@
 import React, { Component } from "react";
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import Form from 'react-bootstrap/Form';
-import axios from 'axios';
+import "./Footer.css"
 
 class Footer extends React.Component {
     render() {
         return (
             <>
-                    <div>
+                    <div className="footer-body">
       <h1>This is footer</h1>
     </div>
             </>

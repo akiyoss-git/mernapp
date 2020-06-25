@@ -84,6 +84,9 @@ export default class PricelistModule extends Component {
     }
     
     componentDidMount(){
+        let button = document.getElementsByClassName("header-pricelist")[0];
+        button.style.background = "#FFFFFF"
+        button.style.color = "#260B5D"
         const cookie = new Cookies();
         let state = cookie.get("state");
         if (state === "pricelist"){
