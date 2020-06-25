@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import "./css/modals.css"
 import axios from 'axios';
+import minus from "../../../static/minus.png"
 
 class DeleteModal extends React.Component {
     constructor(props, context) {
@@ -39,7 +40,7 @@ class DeleteModal extends React.Component {
         return (
             <>
                 <button type="button" onClick={this.handleShow} className="delete">
-                    удалить
+                    <img src={minus} style={{marginTop: "-6px", marginLeft: "-5px"}} />
                 </button>
                 <Modal show={this.state.show} onHide={this.handleClose} className="text-dark">
                     <Modal.Header closeButton>

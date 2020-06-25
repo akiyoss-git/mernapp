@@ -4,12 +4,12 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 
-class Footer extends React.Component {
+class Header extends React.Component {
     render() {
         return (
             <>
                     <div>
-      <h1>This is header</h1>
+      Header
     </div>
             </>
         );
@@ -17,4 +17,4 @@ class Footer extends React.Component {
 }
 
 
-export default Footer;
+export default Header;

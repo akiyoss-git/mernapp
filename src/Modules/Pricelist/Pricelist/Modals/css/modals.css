@@ -17,33 +17,46 @@ color: #260B5D;
     position: relative;
     width: 288px;
     height: 42px;
-    left: 850px;
-    
+    left: 890px;
+    top: 78px;
     background: #FC6441;
     border-radius: 12px;
     font-family: PT Sans;
-font-style: normal;
-font-weight: bold;
-
-color: #FFFFFF;
+    font-style: normal;
+    font-weight: bold;
+    color: #FFFFFF;
 }
 
 .delete{
-    position: relative;
+    position: absolute;
     width: 30px;
-height: 30px;
-    top:-25px;
-    left: 1100px;
-
-background: #E4E2F4;
+    height: 30px;
+    margin-left: 1100px;
+    margin-top: -28px;
+    background-color: #FFFFFF;
+    outline: none;
+    border:none;
 }
 
 .filter{
     position: absolute;
 width: 30px;
 height: 30px;
-left: 452px;
-top: 174px;
+top: 50px;
+left: 197px;
+background-color: #FFFFFF;
+outline: none;
+border:none;
+}
 
-background: #E4E2F4;
+.plus{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50px;
+    left: 230px;
+    background-color: #FFFFFF;
+    outline: none;
+    border:none;
+
 }

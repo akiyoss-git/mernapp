@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 import "./css/modals.css"
+import filterimg from "../../../static/filter.png"
 
 class DeleteModal extends React.Component {
     constructor(props, context) {
@@ -51,7 +52,7 @@ class DeleteModal extends React.Component {
         return (
             <>
                 <button type="button" onClick={this.handleShow} className="filter">
-                    Фильтр
+                    <img src={filterimg} style={{marginTop: "-1px", marginLeft: "-9px"}}/>
                 </button>
                 <Modal show={this.state.show} onHide={this.handleClose} className="text-dark">
                     <Modal.Header closeButton>

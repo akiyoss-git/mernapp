@@ -7,6 +7,8 @@ import FilterModal from "./Modals/FilterModal"
 import axios from 'axios';
 import Cookies from 'universal-cookie';
 import "./css/pricelist.css"
+import shst from "../../static/sht.png"
+import ok from "../../static/ok.png"
 
 const Act = props => (
     <>
@@ -59,7 +61,11 @@ export default class Pricelist extends Component {
                     <thead>
                         <tr>
                         <tr>
-                            <th><div className="rotate">{type.name}<button onClick={hidden} className="sht">шестерня</button></div></th>
+                        <th><div className="rotate">{type.name}<button onClick={hidden} className="sht">
+                                {state ? <img src={ok} style={{marginLeft:"-9px", marginTop: "-1px"}}/>
+                                : <img src={shst} style={{marginLeft:"-9px", marginTop: "-1px"}}/>}
+                                </button>
+                            </div></th>
                             </tr>
                         </tr>
                     </thead>
@@ -83,7 +89,11 @@ export default class Pricelist extends Component {
                     <table style={{ marginTop: 20 }}>
                         <thead>
                             <tr>
-                            <th><div className="rotate">{type.name}<button onClick={hidden}>шестерня</button></div></th>
+                            <th><div className="rotate">{type.name}<button onClick={hidden} className="sht">
+                                {state ? <img src={ok} style={{marginLeft:"-9px", marginTop: "-1px"}}/>
+                                : <img src={shst} style={{marginLeft:"-9px", marginTop: "-1px"}}/>}
+                                </button>
+                            </div></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -106,6 +116,7 @@ export default class Pricelist extends Component {
     render() {
         return (
             <div>
+                <div className="aname">Автомойка "МИР"</div>
                 <FilterModal />
                 {this.ActList()}
                 <form action="http://localhost:4000/acts/excel/">

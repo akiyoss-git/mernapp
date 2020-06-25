@@ -19,24 +19,68 @@ export default class PricelistModule extends Component {
         const cookie = new Cookies();
         cookie.set("state", "pricelist");
         this.setState({pricelist: true, nomen: false, warehouse: false, analys: false});
+        let line = document.getElementsByClassName('downLine')[0]
+        line.style.width = "314px";
+        line.style.left = "0px";
+        let pl = document.getElementsByClassName('pricelist')[0]
+        pl.style.color= "#260B5D";
+        let nomen = document.getElementsByClassName('nomen')[0]
+        nomen.style.color= "#B7A7D7";
+        let warehouse = document.getElementsByClassName('warehouse')[0]
+        warehouse.style.color= "#B7A7D7";
+        let analys = document.getElementsByClassName('analys')[0]
+        analys.style.color= "#B7A7D7";
     }
 
     onClickNomen(){
         const cookie = new Cookies();
         cookie.set("state", "nomen");
         this.setState({pricelist: false, nomen: true, warehouse: false, analys: false});
+        let line = document.getElementsByClassName('downLine')[0]
+        line.style.width = "286px";
+        line.style.left = "312px";
+        let pl = document.getElementsByClassName('pricelist')[0]
+        pl.style.color= "#B7A7D7";
+        let nomen = document.getElementsByClassName('nomen')[0]
+        nomen.style.color= "#260B5D";
+        let warehouse = document.getElementsByClassName('warehouse')[0]
+        warehouse.style.color= "#B7A7D7";
+        let analys = document.getElementsByClassName('analys')[0]
+        analys.style.color= "#B7A7D7";
     }
 
     onClickWarehouse(){
         const cookie = new Cookies();
         cookie.set("state", "warehouse");
         this.setState({pricelist: false, nomen: false, warehouse: true, analys: false});
+        let line = document.getElementsByClassName('downLine')[0]
+        line.style.width = "286px";
+        line.style.left = "598px";
+        let pl = document.getElementsByClassName('pricelist')[0]
+        pl.style.color= "#B7A7D7";
+        let nomen = document.getElementsByClassName('nomen')[0]
+        nomen.style.color= "#B7A7D7";
+        let warehouse = document.getElementsByClassName('warehouse')[0]
+        warehouse.style.color= "#260B5D";
+        let analys = document.getElementsByClassName('analys')[0]
+        analys.style.color= "#B7A7D7";
     }
 
     onClickAnalys(){
         const cookie = new Cookies();
         cookie.set("state", "analys");
         this.setState({pricelist: false, nomen: false, warehouse: false, analys: true});
+        let line = document.getElementsByClassName('downLine')[0]
+        line.style.width = "314px";
+        line.style.left = "884px";
+        let pl = document.getElementsByClassName('pricelist')[0]
+        pl.style.color= "#B7A7D7";
+        let nomen = document.getElementsByClassName('nomen')[0]
+        nomen.style.color= "#B7A7D7";
+        let warehouse = document.getElementsByClassName('warehouse')[0]
+        warehouse.style.color= "#B7A7D7";
+        let analys = document.getElementsByClassName('analys')[0]
+        analys.style.color= "#260B5D";
     }
     
     componentDidMount(){

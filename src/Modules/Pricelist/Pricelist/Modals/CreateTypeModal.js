@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import "./css/modals.css"
 import axios from 'axios';
+import plus from "../../../static/plus.png"
 
 class CreateTypeModal extends React.Component {
     constructor(props, context) {
@@ -46,6 +47,9 @@ class CreateTypeModal extends React.Component {
     render() {
         return (
             <>
+                <button type="button" onClick={this.handleShow} className="plus">
+                    <img src={plus} style={{marginTop: "-1px", marginLeft: "-9px"}}/>
+                </button>
                 <button type="button" onClick={this.handleShow} className="addCategory">
                     Добавить категорию
                 </button>

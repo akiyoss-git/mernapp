@@ -2,8 +2,8 @@
 position: relative;
 width: 288px;
 height: 42px;
-left: 0px;
-top: 42px;
+left: 26px;
+top: 120px;
 
 background: #260B5D;
 border-radius: 12px;
@@ -29,7 +29,7 @@ table{
     position: relative;
     width: 1144px;
 height: 227px;
-top: 80px;
+top: 90px;
 left: 26px;
 
 background: #FFFFFF;
@@ -63,10 +63,9 @@ background: #F4F4F5;
 }
 
 .name{
-    width: 170px;
 height: 20px;
-left: 244px;
-top: 277px;
+transform: translate(0px, 15px);
+top: 287px;
 
 font-family: PT Sans;
 font-style: normal;
@@ -104,6 +103,30 @@ color: #260B5D;
 height: 30px;
 left: 1030px;
 top: 10px;
+border:none;
+background: #260B5D;
+}
 
-background: #E4E2F4;
+.aname{
+    position: absolute;
+width: 147px;
+height: 30px;
+top: 50px;
+left: 40px;
+
+background: #B7A7D7;
+border-radius: 14px;
+
+font-family: PT Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+line-height: 20px;
+
+/* or 118% */
+align-items: center;
+text-align: center;
+letter-spacing: -0.41px;
+
+color: #FFFFFF;
 }
