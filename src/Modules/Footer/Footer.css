@@ -1,6 +1,132 @@
 .footer-body{
 width: 100%;
-height: 100px;
+height: 130px;
 
 background: #260B5D;
+}
+
+.footer-name{
+    position: relative;
+height: 20px;
+top: 40px;
+left: 200px;
+font-family: PT Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 20px;
+
+/* identical to box height, or 125% */
+letter-spacing: -0.41px;
+
+color: #FFFFFF;
+}
+
+.footer-question{
+    position: relative;
+width: 180px;
+height: 42px;
+left: 405px;
+top:10px;
+background-color: #260B5D;
+border: 2px solid #B7A7D7;
+border-radius: 12px;
+
+font-family: PT Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 18px;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+}
+
+.footer-mobile{
+    position: relative;
+    width: 130px;
+height: 20px;
+left: 617px;
+top: -20px;
+
+font-family: PT Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 20px;
+
+/* identical to box height, or 125% */
+display: flex;
+align-items: center;
+letter-spacing: -0.41px;
+text-decoration-line: underline;
+
+color: #FFFFFF;
+}
+
+.footer-login{
+    position: relative;
+    width: 130px;
+height: 20px;
+left: 767px;
+top:-39px;
+
+
+font-family: PT Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 20px;
+
+/* identical to box height, or 125% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.41px;
+text-decoration-line: underline;
+
+color: #FFFFFF;
+}
+
+.footer-vk{
+    position: relative;
+    left: 907px;
+    top: -60px
+}
+
+.footer-fb{
+    position: relative;
+    left: 917px;
+    top: -60px;
+}
+
+.footer-ok{
+    position: relative;
+    top:-60px;
+    left: 927px;
+}
+
+.footer-tw{
+    position: relative;
+    top:-60px;
+    left: 937px;
+}
+
+.footer-inst{
+    position: relative;
+    top:-60px;
+    left: 947px;
+}
+
+.footer-gp{
+    position: relative;
+    top:-60px;
+    left: 1000px;
+}
+
+.footer-as{
+    position: relative;
+    top:-60px;
+    left: 1020px;
 }
